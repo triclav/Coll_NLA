@@ -1,0 +1,19 @@
+Results:
+
+1391684 124.155.46.147
+  53212 162.80.108.155
+  38029 228.211.106.241
+  36180 228.211.106.100
+  29322 228.211.106.41
+
+
+
+Command to get this:
+
+$ awk '$7 ~ /^\/newspaper/ && $9 ==200 {print $1}' access_log.01-Sep-2019.log | sort | uniq -c | sort -n -r  | head -5
+
+Assumption that a http return of 200 indicates as success. If you wanted just the IPs you would pipe this through awk '{print $2}'
+
+
+What this might mean:
+Over 83% of successful requests in the top five are from 124.155.46.147. I'd expect that it would make up over 75% of requests of the total. Since these are successful we can most likely rule out a crude DOS attack. This IP is hosted in Japan. I recommend determining if this is a ligit user of the system. If not then this IP could be added to a block list and reduce load to 17% (based on this log sample). If it a ligit user and there are performance concerns, I recommend using geo-based routing to offload requests from this client (and any other Japanese-based clients) to a mirror site in Japan. For simplicity, this IP could be routed to a different server (or cluster) so it's usage doesn’t effect other clients.
