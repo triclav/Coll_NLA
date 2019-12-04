@@ -1,361 +1,0 @@
-=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2019.12.04 10:55:06 =~=~=~=~=~=~=~=~=~=~=~=
-Using username "ec2-user".
-Authenticating with public key "imported-openssh-key"
-
-       __|  __|_  )
-       _|  (     /   Amazon Linux 2 AMI
-      ___|\___|___|
-
-https://aws.amazon.com/amazon-linux-2/
-5 package(s) needed for security, out of 13 available
-Run "sudo yum update" to apply all updates.
-[ec2-user@ip-172-31-30-158 ~]$ sudo yum update -y
-Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
-Resolving Dependencies
---> Running transaction check
----> Package file.x86_64 0:5.11-33.amzn2.0.2 will be updated
----> Package file.x86_64 0:5.11-35.amzn2.0.1 will be an update
----> Package file-libs.x86_64 0:5.11-33.amzn2.0.2 will be updated
----> Package file-libs.x86_64 0:5.11-35.amzn2.0.1 will be an update
----> Package kernel.x86_64 0:4.14.154-128.181.amzn2 will be installed
----> Package python.x86_64 0:2.7.16-3.amzn2.0.1 will be updated
----> Package python.x86_64 0:2.7.16-4.amzn2 will be an update
----> Package python-devel.x86_64 0:2.7.16-3.amzn2.0.1 will be updated
----> Package python-devel.x86_64 0:2.7.16-4.amzn2 will be an update
----> Package python-libs.x86_64 0:2.7.16-3.amzn2.0.1 will be updated
----> Package python-libs.x86_64 0:2.7.16-4.amzn2 will be an update
----> Package python2-rpm.x86_64 0:4.11.3-40.amzn2.0.3 will be obsoleting
----> Package rpm.x86_64 0:4.11.3-25.amzn2.0.3 will be updated
----> Package rpm.x86_64 0:4.11.3-40.amzn2.0.3 will be an update
----> Package rpm-build-libs.x86_64 0:4.11.3-25.amzn2.0.3 will be updated
----> Package rpm-build-libs.x86_64 0:4.11.3-40.amzn2.0.3 will be an update
----> Package rpm-libs.x86_64 0:4.11.3-25.amzn2.0.3 will be updated
----> Package rpm-libs.x86_64 0:4.11.3-40.amzn2.0.3 will be an update
----> Package rpm-plugin-systemd-inhibit.x86_64 0:4.11.3-25.amzn2.0.3 will be updated
----> Package rpm-plugin-systemd-inhibit.x86_64 0:4.11.3-40.amzn2.0.3 will be an update
----> Package rpm-python.x86_64 0:4.11.3-25.amzn2.0.3 will be obsoleted
----> Package rsyslog.x86_64 0:8.24.0-16.amzn2.6.1 will be updated
----> Package rsyslog.x86_64 0:8.24.0-41.amzn2.2.1 will be an update
----> Package yum.noarch 0:3.4.3-158.amzn2.0.2 will be updated
----> Package yum.noarch 0:3.4.3-158.amzn2.0.3 will be an update
---> Finished Dependency Resolution
-
-Dependencies Resolved
-
-================================================================================
- Package                     Arch    Version                  Repository   Size
-================================================================================
-Installing:
- kernel                      x86_64  4.14.154-128.181.amzn2   amzn2-core   20 M
- python2-rpm                 x86_64  4.11.3-40.amzn2.0.3      amzn2-core   84 k
-     replacing  rpm-python.x86_64 4.11.3-25.amzn2.0.3
-Updating:
- file                        x86_64  5.11-35.amzn2.0.1        amzn2-core   57 k
- file-libs                   x86_64  5.11-35.amzn2.0.1        amzn2-core  339 k
- python                      x86_64  2.7.16-4.amzn2           amzn2-core   92 k
- python-devel                x86_64  2.7.16-4.amzn2           amzn2-core  403 k
- python-libs                 x86_64  2.7.16-4.amzn2           amzn2-core  7.4 M
- rpm                         x86_64  4.11.3-40.amzn2.0.3      amzn2-core  1.2 M
- rpm-build-libs              x86_64  4.11.3-40.amzn2.0.3      amzn2-core  106 k
- rpm-libs                    x86_64  4.11.3-40.amzn2.0.3      amzn2-core  275 k
- rpm-plugin-systemd-inhibit  x86_64  4.11.3-40.amzn2.0.3      amzn2-core   47 k
- rsyslog                     x86_64  8.24.0-41.amzn2.2.1      amzn2-core  613 k
- yum                         noarch  3.4.3-158.amzn2.0.3      amzn2-core  1.2 M
-
-Transaction Summary
-================================================================================
-Install   2 Packages
-Upgrade  11 Packages
-
-Total download size: 32 M
-Downloading packages:
-Delta RPMs disabled because /usr/bin/applydeltarpm not installed.
-(1/13): file-5.11-35.amzn2.0.1.x86_64.rpm                  |  57 kB   00:00     
-(2/13): file-libs-5.11-35.amzn2.0.1.x86_64.rpm             | 339 kB   00:00     
-(3/13): python-2.7.16-4.amzn2.x86_64.rpm                   |  92 kB   00:00     
-(4/13): python-devel-2.7.16-4.amzn2.x86_64.rpm             | 403 kB   00:00     
-(6/13): python-libs-2.7.16 21% [===             ]  0.0 B/s | 6.9 MB   --:-- ETA (5/13): python-libs-2.7.16-4.amzn2.x86_64.rpm              | 7.4 MB   00:00     
-(7/13): python2-rpm-4.11.3 58% [=========       ]  14 MB/s |  19 MB   00:00 ETA (6/13): python2-rpm-4.11.3-40.amzn2.0.3.x86_64.rpm         |  84 kB   00:00     
-(7/13): rpm-4.11.3-40.amzn2.0.3.x86_64.rpm                 | 1.2 MB   00:00     
-(8/13): rpm-build-libs-4.11.3-40.amzn2.0.3.x86_64.rpm      | 106 kB   00:00     
-(9/13): rpm-libs-4.11.3-40.amzn2.0.3.x86_64.rpm            | 275 kB   00:00     
-(10/13): rpm-plugin-systemd-inhibit-4.11.3-40.amzn2.0.3.x8 |  47 kB   00:00     
-(11/13): rsyslog-8.24.0-41.amzn2.2.1.x86_64.rpm            | 613 kB   00:00     
-(12/13): yum-3.4.3-158.amzn2.0.3.noarch.rpm                | 1.2 MB   00:00     
-(13/13): kernel-4.14.154-128.181.amzn2.x86_64.rpm          |  20 MB   00:01     
---------------------------------------------------------------------------------
-Total                                               23 MB/s |  32 MB  00:01     
-Running transaction check
-Running transaction test
-Transaction test succeeded
-Running transaction
-  Updating   : rpm-4.11.3-40.amzn2.0.3.x86 [########################### ]  1/25  Updating   : rpm-4.11.3-40.amzn2.0.3.x86_64                              1/25 
-snip  Updating   : rpm-libs-4.11.3-40.amzn2.0. [                            ]  2/25  Updating   : rpm-libs-4.11.3-40.amzn2.0. [###                         ]  2/25snip
-  Updating   : rpm-libs-4.11.3-40.amzn2.0. [########################### ]  2/25  Updating   : rpm-libs-4.11.3-40.amzn2.0.3.x86_64                         2/25 
-  Updating   : file-libs-5.11-35.amzn2.0.1 [                            ]  3/25snip
-  Updating   : file-libs-5.11-35.amzn2.0.1 [########################### ]  3/25  Updating   : file-libs-5.11-35.amzn2.0.1.x86_64                          3/25 
-  Updating   : python-libs-2.7.16-4.amzn2. [                            ]  4/25snip
-  Updating   : python-libs-2.7.16-4.amzn2. [########################### ]  4/25  Updating   : python-libs-2.7.16-4.amzn2.x86_64                           4/25 
-big snip  
-
-  Verifying  : rsyslog-8.24.0-16.amzn2.6.1.x86_64                         24/25 
-  Verifying  : file-libs-5.11-33.amzn2.0.2.x86_64                         25/25 
-
-Installed:
-  kernel.x86_64 0:4.14.154-128.181.amzn2                                        
-  python2-rpm.x86_64 0:4.11.3-40.amzn2.0.3                                      
-
-Updated:
-  file.x86_64 0:5.11-35.amzn2.0.1                                               
-  file-libs.x86_64 0:5.11-35.amzn2.0.1                                          
-  python.x86_64 0:2.7.16-4.amzn2                                                
-  python-devel.x86_64 0:2.7.16-4.amzn2                                          
-  python-libs.x86_64 0:2.7.16-4.amzn2                                           
-  rpm.x86_64 0:4.11.3-40.amzn2.0.3                                              
-  rpm-build-libs.x86_64 0:4.11.3-40.amzn2.0.3                                   
-  rpm-libs.x86_64 0:4.11.3-40.amzn2.0.3                                         
-  rpm-plugin-systemd-inhibit.x86_64 0:4.11.3-40.amzn2.0.3                       
-  rsyslog.x86_64 0:8.24.0-41.amzn2.2.1                                          
-  yum.noarch 0:3.4.3-158.amzn2.0.3                                              
-
-Replaced:
-  rpm-python.x86_64 0:4.11.3-25.amzn2.0.3                                       
-
-Complete!
-[ec2-user@ip-172-31-30-158 ~]$ sudo yum install git
-Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
-Existing lock /var/run/yum.pid: another copy is running as pid 12234.
-Another app is currently holding the yum lock; waiting for it to exit...
-  The other application is: yum
-    Memory : 105 M RSS (322 MB VSZ)
-    Started: Wed Dec  4 01:25:40 2019 - 00:03 ago
-    State  : Running, pid: 12234
-Resolving Dependencies
---> Running transaction check
----> Package git.x86_64 0:2.17.2-2.amzn2 will be installed
---> Processing Dependency: perl-Git = 2.17.2-2.amzn2 for package: git-2.17.2-2.amzn2.x86_64
---> Processing Dependency: git-core-doc = 2.17.2-2.amzn2 for package: git-2.17.2-2.amzn2.x86_64
---> Processing Dependency: git-core = 2.17.2-2.amzn2 for package: git-2.17.2-2.amzn2.x86_64
---> Processing Dependency: emacs-filesystem >= 25.3 for package: git-2.17.2-2.amzn2.x86_64
---> Processing Dependency: perl(Term::ReadKey) for package: git-2.17.2-2.amzn2.x86_64
---> Processing Dependency: perl(Git::I18N) for package: git-2.17.2-2.amzn2.x86_64
---> Processing Dependency: perl(Git) for package: git-2.17.2-2.amzn2.x86_64
---> Processing Dependency: libsecret-1.so.0()(64bit) for package: git-2.17.2-2.amzn2.x86_64
---> Running transaction check
----> Package emacs-filesystem.noarch 1:25.3-3.amzn2.0.1 will be installed
----> Package git-core.x86_64 0:2.17.2-2.amzn2 will be installed
----> Package git-core-doc.noarch 0:2.17.2-2.amzn2 will be installed
----> Package libsecret.x86_64 0:0.18.5-2.amzn2.0.2 will be installed
----> Package perl-Git.noarch 0:2.17.2-2.amzn2 will be installed
---> Processing Dependency: perl(Error) for package: perl-Git-2.17.2-2.amzn2.noarch
----> Package perl-TermReadKey.x86_64 0:2.30-20.amzn2.0.2 will be installed
---> Running transaction check
----> Package perl-Error.noarch 1:0.17020-2.amzn2 will be installed
---> Finished Dependency Resolution
-
-Dependencies Resolved
-
-================================================================================
- Package              Arch       Version                   Repository      Size
-================================================================================
-Installing:
- git                  x86_64     2.17.2-2.amzn2            amzn2-core     217 k
-Installing for dependencies:
- emacs-filesystem     noarch     1:25.3-3.amzn2.0.1        amzn2-core      64 k
- git-core             x86_64     2.17.2-2.amzn2            amzn2-core     4.0 M
- git-core-doc         noarch     2.17.2-2.amzn2            amzn2-core     2.3 M
- libsecret            x86_64     0.18.5-2.amzn2.0.2        amzn2-core     153 k
- perl-Error           noarch     1:0.17020-2.amzn2         amzn2-core      32 k
- perl-Git             noarch     2.17.2-2.amzn2            amzn2-core      70 k
- perl-TermReadKey     x86_64     2.30-20.amzn2.0.2         amzn2-core      31 k
-
-Transaction Summary
-================================================================================
-Install  1 Package (+7 Dependent packages)
-
-Total download size: 6.8 M
-Installed size: 36 M
-Is this ok [y/d/N]: y
-Downloading packages:
-(1/8): emacs-filesystem-25.3-3.amzn2.0.1.noarch.rpm        |  64 kB   00:00     
-(2/8): git-2.17.2-2.amzn2.x86_64.rpm                       | 217 kB   00:00     
-(3/8): git-core-2.17.2-2.amzn2.x86_64.rpm                  | 4.0 MB   00:00     
-(4/8): git-core-doc-2.17.2-2.amzn2.noarch.rpm              | 2.3 MB   00:00     
-(5/8): libsecret-0.18.5-2.amzn2.0.2.x86_64.rpm             | 153 kB   00:00     
-(6/8): perl-Git-2.17.2-2.amzn2.noarch.rpm                  |  70 kB   00:00     
-(7/8): perl-TermReadKey-2.30-20.amzn2.0.2.x86_64.rpm       |  31 kB   00:00     
-(8/8): perl-Error-0.17020-2.amzn2.noarch.rpm               |  32 kB   00:00     
---------------------------------------------------------------------------------
-Total                                               18 MB/s | 6.8 MB  00:00     
-Running transaction check
-Running transaction test
-Transaction test succeeded
-Running transaction
-  Installing : git-core-2.17.2-2.amzn2.x86_ [                             ] 1/8snip
-  Installing : git-2.17.2-2.amzn2.x86_64                                    8/8 
-  Verifying  : 1:emacs-filesystem-25.3-3.amzn2.0.1.noarch                   1/8 
-  Verifying  : perl-TermReadKey-2.30-20.amzn2.0.2.x86_64                    2/8 
-  Verifying  : 1:perl-Error-0.17020-2.amzn2.noarch                          3/8 
-  Verifying  : libsecret-0.18.5-2.amzn2.0.2.x86_64                          4/8 
-  Verifying  : git-core-2.17.2-2.amzn2.x86_64                               5/8 
-  Verifying  : git-2.17.2-2.amzn2.x86_64                                    6/8 
-  Verifying  : perl-Git-2.17.2-2.amzn2.noarch                               7/8 
-  Verifying  : git-core-doc-2.17.2-2.amzn2.noarch                           8/8 
-
-Installed:
-  git.x86_64 0:2.17.2-2.amzn2                                                   
-
-Dependency Installed:
-  emacs-filesystem.noarch 1:25.3-3.amzn2.0.1                                    
-  git-core.x86_64 0:2.17.2-2.amzn2                                              
-  git-core-doc.noarch 0:2.17.2-2.amzn2                                          
-  libsecret.x86_64 0:0.18.5-2.amzn2.0.2                                         
-  perl-Error.noarch 1:0.17020-2.amzn2                                           
-  perl-Git.noarch 0:2.17.2-2.amzn2                                              
-  perl-TermReadKey.x86_64 0:2.30-20.amzn2.0.2                                   
-
-Complete!
-[ec2-user@ip-172-31-30-158 ~]$ sudo amazon-linux-extras install docker
-Installing docker
-Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
-Cleaning repos: amzn2-core amzn2extra-docker
-10 metadata files removed
-4 sqlite files removed
-0 metadata files removed
-Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
-amzn2-core                                               | 2.4 kB     00:00     
-amzn2extra-docker                                        | 1.3 kB     00:00     
-(1/4): amzn2-core/2/x86_64/group_gz                        | 2.6 kB   00:00     
-(2/4): amzn2-core/2/x86_64/updateinfo                      | 174 kB   00:00     
-(3/4): amzn2extra-docker/2/x86_64/primary_db               |  59 kB   00:00     
-(4/4): amzn2-core/2/x86_64 64% [==========      ]  0.0 B/s |  23 MB   --:-- ETA (4/4): amzn2-core/2/x86_64/primary_db                      |  36 MB   00:00     
-Resolving Dependencies
---> Running transaction check
----> Package docker.x86_64 0:18.09.9ce-2.amzn2 will be installed
---> Processing Dependency: runc = 1.0.0 for package: docker-18.09.9ce-2.amzn2.x86_64
---> Processing Dependency: containerd = 1.2.6 for package: docker-18.09.9ce-2.amzn2.x86_64
---> Processing Dependency: pigz for package: docker-18.09.9ce-2.amzn2.x86_64
---> Processing Dependency: libcgroup for package: docker-18.09.9ce-2.amzn2.x86_64
---> Running transaction check
----> Package containerd.x86_64 0:1.2.6-1.amzn2 will be installed
----> Package libcgroup.x86_64 0:0.41-21.amzn2 will be installed
----> Package pigz.x86_64 0:2.3.4-1.amzn2.0.1 will be installed
----> Package runc.x86_64 0:1.0.0-0.1.20190510.git2b18fe1.amzn2 will be installed
---> Finished Dependency Resolution
-
-Dependencies Resolved
-
-================================================================================
- Package    Arch   Version                              Repository         Size
-================================================================================
-Installing:
- docker     x86_64 18.09.9ce-2.amzn2                    amzn2extra-docker  30 M
-Installing for dependencies:
- containerd x86_64 1.2.6-1.amzn2                        amzn2extra-docker  20 M
- libcgroup  x86_64 0.41-21.amzn2                        amzn2-core         66 k
- pigz       x86_64 2.3.4-1.amzn2.0.1                    amzn2-core         81 k
- runc       x86_64 1.0.0-0.1.20190510.git2b18fe1.amzn2  amzn2extra-docker 2.0 M
-
-Transaction Summary
-================================================================================
-Install  1 Package (+4 Dependent packages)
-
-Total download size: 51 M
-Installed size: 214 M
-Is this ok [y/d/N]: y
-Downloading packages:
-(1/5): libcgroup-0.41-21.amzn2.x86_64.rpm                  |  66 kB   00:00     
-(2/5): pigz-2.3.4-1.amzn2.0.1.x86_64.rpm                   |  81 kB   00:00     
-(4/5): docker-18.09.9ce-2. 30% [====-           ]  0.0 B/s |  16 MB   --:-- ETA (3/5): containerd-1.2.6-1.amzn2.x86_64.rpm                 |  20 MB   00:00     
-(4/5): docker-18.09.9ce-2.amzn2.x86_64.rpm                 |  30 MB   00:00     
-(5/5): runc-1.0.0-0.1.20190510.git2b18fe1.amzn2.x86_64.rpm | 2.0 MB   00:00     
---------------------------------------------------------------------------------
-Total                                               63 MB/s |  51 MB  00:00     
-Running transaction check
-Running transaction test
-Transaction test succeeded
-Running transaction
-  Installing : runc-1.0.0-0.1.20190510.git2 [                             ] 1/5snip
-  Installing : docker-18.09.9ce-2.amzn2.x86_64                              5/5 
-  Verifying  : docker-18.09.9ce-2.amzn2.x86_64                              1/5 
-  Verifying  : runc-1.0.0-0.1.20190510.git2b18fe1.amzn2.x86_64              2/5 
-  Verifying  : pigz-2.3.4-1.amzn2.0.1.x86_64                                3/5 
-  Verifying  : containerd-1.2.6-1.amzn2.x86_64                              4/5 
-  Verifying  : libcgroup-0.41-21.amzn2.x86_64                               5/5 
-
-Installed:
-  docker.x86_64 0:18.09.9ce-2.amzn2                                             
-
-Dependency Installed:
-  containerd.x86_64 0:1.2.6-1.amzn2                                             
-  libcgroup.x86_64 0:0.41-21.amzn2                                              
-  pigz.x86_64 0:2.3.4-1.amzn2.0.1                                               
-  runc.x86_64 0:1.0.0-0.1.20190510.git2b18fe1.amzn2                             
-
-Complete!
-  0  ansible2                 available    [ =2.4.2  =2.4.6  =2.8 ]
-  2  httpd_modules            available    [ =1.0 ]
-  3  memcached1.5             available    \
-        [ =1.5.1  =1.5.16  =1.5.17 ]
-  5  postgresql9.6            available    [ =9.6.6  =9.6.8 ]
-  6  postgresql10             available    [ =10 ]
-  8  redis4.0                 available    [ =4.0.5  =4.0.10 ]
-  9  R3.4                     available    [ =3.4.3 ]
- 10  rust1                    available    \
-        [ =1.22.1  =1.26.0  =1.26.1  =1.27.2  =1.31.0  =1.38.0 ]
- 11  vim                      available    [ =8.0 ]
- 13  ruby2.4                  available    [ =2.4.2  =2.4.4  =2.4.7 ]
- 15  php7.2                   available    \
-        [ =7.2.0  =7.2.4  =7.2.5  =7.2.8  =7.2.11  =7.2.13  =7.2.14
-          =7.2.16  =7.2.17  =7.2.19  =7.2.21  =7.2.22  =7.2.23
-          =7.2.24 ]
- 16  php7.1                   available    \
-        [ =7.1.22  =7.1.25  =7.1.27  =7.1.28  =7.1.30  =7.1.31
-          =7.1.32  =7.1.33 ]
- 17  lamp-mariadb10.2-php7.2  available    \
-        [ =10.2.10_7.2.0  =10.2.10_7.2.4  =10.2.10_7.2.5
-          =10.2.10_7.2.8  =10.2.10_7.2.11  =10.2.10_7.2.13
-          =10.2.10_7.2.14  =10.2.10_7.2.16  =10.2.10_7.2.17
-          =10.2.10_7.2.19  =10.2.10_7.2.21  =10.2.10_7.2.22
-          =10.2.10_7.2.23  =10.2.10_7.2.24 ]
- 18  libreoffice              available    [ =5.0.6.2_15  =5.3.6.1 ]
- 19  gimp                     available    [ =2.8.22 ]
- 20  docker=latest            enabled      \
-        [ =17.12.1  =18.03.1  =18.06.1  =18.09.9 ]
- 21  mate-desktop1.x          available    [ =1.19.0  =1.20.0 ]
- 22  GraphicsMagick1.3        available    [ =1.3.29  =1.3.32 ]
- 23  tomcat8.5                available    \
-        [ =8.5.31  =8.5.32  =8.5.38  =8.5.40  =8.5.42 ]
- 24  epel                     available    [ =7.11 ]
- 25  testing                  available    [ =1.0 ]
- 26  ecs                      available    [ =stable ]
- 27  corretto8                available    \
-        [ =1.8.0_192  =1.8.0_202  =1.8.0_212  =1.8.0_222  =1.8.0_232 ]
- 28  firecracker              available    [ =0.11 ]
- 29  golang1.11               available    \
-        [ =1.11.3  =1.11.11  =1.11.13 ]
- 30  squid4                   available    [ =4 ]
- 31  php7.3                   available    \
-        [ =7.3.2  =7.3.3  =7.3.4  =7.3.6  =7.3.8  =7.3.9  =7.3.10
-          =7.3.11 ]
- 32  lustre2.10               available    [ =2.10.5 ]
- 33  java-openjdk11           available    [ =11 ]
- 34  lynis                    available    [ =stable ]
- 35  kernel-ng                available    [ =stable ]
- 36  BCC                      available    [ =0.x ]
- 37  mono                     available    [ =5.x ]
- 38  nginx1                   available    [ =stable ]
- 39  ruby2.6                  available    [ =2.6 ]
- 40  mock                     available    [ =stable ]
- 41  postgresql11             available    [ =11 ]
-[ec2-user@ip-172-31-30-158 ~]$ sudo service docker start
-Redirecting to /bin/systemctl start docker.service
-[ec2-user@ip-172-31-30-158 ~]$ sudo chkconfig docker on
-Note: Forwarding request to 'systemctl enable docker.service'.
-Created symlink from /etc/systemd/system/multi-user.target.wants/docker.service to /usr/lib/systemd/system/docker.service.
-[ec2-user@ip-172-31-30-158 ~]$ sudo chkconfig docker
-Note: Forwarding request to 'systemctl is-enabled docker.service'.
-enabled
-[ec2-user@ip-172-31-30-158 ~]$ sudo usermod -a -G docker ec2-user
-[ec2-user@ip-172-31-30-158 ~]$ exit
-logout
