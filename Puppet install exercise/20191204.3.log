@@ -1,0 +1,46 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2019.12.04 11:07:59 =~=~=~=~=~=~=~=~=~=~=~=
+Using username "ec2-user".
+Authenticating with public key "imported-openssh-key"
+Last login: Wed Dec  4 01:35:58 2019 from 49.255.45.242
+
+       __|  __|_  )
+       _|  (     /   Amazon Linux 2 AMI
+      ___|\___|___|
+
+https://aws.amazon.com/amazon-linux-2/
+[ec2-user@ip-172-31-30-158 ~]$ cd puppetdemonstration
+[ec2-user@ip-172-31-30-158 puppetdemonstration]$ docker exec -it puppetdemonstra tion_web_1 /opt/puppetlabs/bin/puppet agent -t
+Info: Creating a new SSL key for dd53cda5316e.ap-southeast-2.compute.internal
+Info: Caching certificate for ca
+Info: csr_attributes file loading from /etc/puppetlabs/puppet/csr_attributes.yaml
+Info: Creating a new SSL certificate request for dd53cda5316e.ap-southeast-2.compute.internal
+Info: Certificate Request fingerprint (SHA256): 84:E7:6B:DC:28:A6:C0:DD:D0:5D:43:22:DB:C9:2D:B3:BF:61:A8:1B:F8:0C:46:DA:E4:DD:1A:BA:C5:C3:8E:8E
+Info: Caching certificate for dd53cda5316e.ap-southeast-2.compute.internal
+Info: Caching certificate_revocation_list for ca
+Info: Caching certificate for ca
+Info: Using configured environment 'production'
+Info: Retrieving pluginfacts
+Info: Retrieving plugin
+Info: Retrieving locales
+Info: Caching catalog for dd53cda5316e.ap-southeast-2.compute.internal
+Info: Applying configuration version '1575423505'
+Notice: hello, world!
+Notice: /Stage[main]/Helloworld/Notify[hello, world!]/message: defined 'message' as 'hello, world!'
+Notice: /Stage[main]/Helloworld::Motd/File[/etc/motd]/content: 
+--- /etc/motd2013-06-07 14:31:32.000000000 +0000
++++ /tmp/puppet-file20191204-6-1sprygf2019-12-04 01:38:26.581826138 +0000
+@@ -0,0 +1 @@
++hello, world!
+
+Info: Computing checksum on file /etc/motd
+Info: /Stage[main]/Helloworld::Motd/File[/etc/motd]: Filebucketed /etc/motd to puppet with sum d41d8cd98f00b204e9800998ecf8427e
+Notice: /Stage[main]/Helloworld::Motd/File[/etc/motd]/content: content changed '{md5}d41d8cd98f00b204e9800998ecf8427e' to '{md5}910c8bc73110b0cd1bc5d2bcae782511'
+Info: Creating state file /opt/puppetlabs/puppet/cache/state/state.yaml
+Notice: Applied catalog in 0.06 seconds
+[ec2-user@ip-172-31-30-158 puppetdemonstration]$ docker exec -it puppetdemonstra tion_web_1 /bin/bash
+[root@dd53cda5316e /]# cat /etc/motd
+hello, world!
+[root@dd53cda5316e /]# exit
+exit
+[ec2-user@ip-172-31-30-158 puppetdemonstration]$ exit
+logout
