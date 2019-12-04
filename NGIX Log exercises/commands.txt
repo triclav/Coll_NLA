@@ -1,0 +1,26 @@
+sudo yum update -y
+sudo yum install git
+sudo amazon-linux-extras install docker
+sudo service docker start
+sudo chkconfig docker on
+sudo chkconfig docker
+sudo usermod -a -G docker ec2-user
+exit
+<login>
+docker info
+git clone https://github.com/nla/puppetdemonstration.git
+cd puppetdemonstration/
+git init
+vi manifests/init.pp
+vi manifests/motd.pp
+vi manifests/site.pp
+sudo curl -L https://github.com/docker/compose/releases/download/1.25.1-rc1/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+docker-compose up
+<new window>
+cd puppetdemonstration
+docker exec -it puppetdemonstration_web_1 /opt/puppetlabs/bin/puppet agent -t
+docker exec -it puppetdemonstration_web_1 /bin/bash
+cat /etc/motd
+exit
